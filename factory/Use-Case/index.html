@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factory Use Case Example</title>
+  <meta name="description" content="Design Patterns In Python"  />
+  <script src= "../../brython.js" type="text/javascript"></script>
+  <script src="../../brython_stdlib.js" type="text/javascript"></script>
+</head>
+<body>
+  <script type="text/python" id="interface_chair" src="interface_chair.py"></script>
+  <script type="text/python" id="small_chair" src="small_chair.py"></script>
+  <script type="text/python" id="medium_chair" src="medium_chair.py"></script>
+  <script type="text/python" id="large_chair" src="big_chair.py"></script>
+  <script type="text/python" id="chair_factory" src="chair_factory.py">
+    from chair_factory import ChairFactory
+    from browser import document, alert
+    document <= 'Factory Use Case Example'
+    Chair = ChairFactory.get_chair("BigChair")
+    document <= repr(Chair.get_dimensions())
+
+  </script>
+
+  <script type="text/python" >
+    
+    from browser import document, alert
+
+    def greet(event):
+      alert('Hello, ' + document['name'].value + '!')
+
+
+      <!-- document <= 'Hello EsteAdonis'
+        alert('Greetings EsteAdonis')
+        print("Hello EsteAdonis") -->
+  </script>
+</body>
+</html>
